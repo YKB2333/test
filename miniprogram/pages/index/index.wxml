@@ -1,0 +1,152 @@
+<!-- logs.wxml -->
+<view style="padding:0 30rpx;">
+  <view>
+    <button bindtap="bindScan">扫一扫</button>
+  </view>
+  <view>
+      <view style="margin-left:20rpx;">商品编码:{{ProdunctCode}}</view>
+    </view>
+  <view class="top1">
+    <view class="fl">
+      <view>条码:{{ProBar}}</view>
+      <view>总补货:{{AllBuHuo}}</view>
+    </view>
+    <view class="fr">
+      <view>库存:{{KuCun}}</view>
+      <view>库位:{{KuWei}}</view>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>北京</view>
+      <input type="number" model:value="{{BJ_BuHuo}}" />
+      <view bindtap="change" data-type="BJ" wx:if="{{BJShow}}">保存</view>
+      <view wx:if="{{!BJShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="BJitems">
+        <label class="weui-cell weui-check__label" wx:for="{{BJitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == BJ_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>成都</view>
+      <input type="number" model:value="{{CD_BuHuo}}" />
+      <view bindtap="change" data-type="CD" wx:if="{{CDShow}}">保存</view>
+      <view wx:if="{{!CDShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="CDitems">
+        <label class="weui-cell weui-check__label" wx:for="{{CDitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == CD_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>广州</view>
+      <input type="number" model:value="{{GZ_BuHuo}}" />
+      <view bindtap="change" data-type="GZ" wx:if="{{GZShow}}">保存</view>
+      <view wx:if="{{!GZShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="GZitems">
+        <label class="weui-cell weui-check__label" wx:for="{{GZitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == GZ_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>济南</view>
+      <input type="number" model:value="{{JN_BuHuo}}" />
+      <view bindtap="change" data-type="JN" wx:if="{{JNShow}}">保存</view>
+      <view wx:if="{{!JNShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="JNitems">
+        <label class="weui-cell weui-check__label" wx:for="{{JNitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == JN_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>上海</view>
+      <input type="number" model:value="{{SH_BuHuo}}" />
+      <view bindtap="change" data-type="SH" wx:if="{{SHShow}}">保存</view>
+      <view wx:if="{{!SHShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="SHitems">
+        <label class="weui-cell weui-check__label" wx:for="{{SHitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == SH_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>武汉</view>
+      <input type="number" model:value="{{WH_BuHuo}}" />
+      <view bindtap="change" data-type="WH" wx:if="{{WHShow}}">保存</view>
+      <view wx:if="{{!WHShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="WHitems">
+        <label class="weui-cell weui-check__label" wx:for="{{WHitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == WH_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+  <view class="top">
+    <view class="item-box">
+      <view>西安</view>
+      <input type="number" model:value="{{XA_BuHuo}}" />
+      <view bindtap="change" data-type="XA" wx:if="{{XAShow}}">保存</view>
+      <view wx:if="{{!XAShow}}">完成</view>
+    </view>
+    <view class="row">
+      <view>箱号：</view>
+      <radio-group bindchange="radioChange" class="row" data-type="XAitems">
+        <label class="weui-cell weui-check__label" wx:for="{{XAitems}}" wx:key="{{item.value}}">
+          <view class="weui-cell__hd">
+            <radio value="{{item.value}}" checked="{{item.value == XA_XiangWeiNumber}}" />
+            {{item.name}}
+          </view>
+        </label>
+      </radio-group>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view class="container">
+  <view 
+  bindtap="onClick"  
+  data-id="{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}"
+  class="box row" wx:for="{{arr}}" wx:key="{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}">
+  <view>{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}</view>
+  <view>{{item.FileName}}</view>
+  <view>{{item.CreateDate}}</view>
+</view>
+</view>
