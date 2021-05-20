@@ -7,8 +7,8 @@
 }
 .item-box{
   display: flex;
-  margin-bottom: 40rpx;
-  font-size: 44rpx;
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
   justify-content: space-between;
   line-height: 40rpx;
 }
@@ -16,12 +16,12 @@
 .top1{
   height:100rpx;
   border-bottom:1px solid #ccc;
-  padding: 20rpx;
+  padding: 0 10rpx;
 }
 .top{
-  height:130rpx;
+  height:100rpx;
   border-bottom:1px solid #ccc;
-  padding: 30rpx 20rpx;
+  padding: 20rpx 0;
 }
 
 .row{
@@ -39,4 +39,18 @@ input{
 
 .weui-cell{
   margin-right: 20rpx;
+}
+.end{
+  color: red;
+}
+
+.weui-check__label{
+  margin: 0;
+  font-size: 12px;
+}
+.top .row {
+  font-size: 12px;
+}
+.top .row radio{
+  width: 44rpx;
 }
