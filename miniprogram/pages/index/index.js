@@ -114,7 +114,7 @@ Page({
 
   },
   onLoad(params) {
-    console.log(params);
+    // console.log(params);
     this.setData({
       child: {
         ...this.data.child,
@@ -241,22 +241,21 @@ Page({
   bindScan() {
     wx.scanCode({
       success: (res) => {
-        console.log(res.result);
+        // console.log(res.result);
         wx.request({
           url: `http://211.149.255.230:61223/getdata.ashx?ProBar=${res.result}&GZ_JDDates_UpdateXiangWei_Files_Id=${this.data.child.id}`,
           success: (res2) => {
-            console.log('123', res2);
-            if (!res2.data || typeof(res2.data )=='string') {
+            console.log('扫描地址', `http://211.149.255.230:61223/getdata.ashx?ProBar=${res.result}&GZ_JDDates_UpdateXiangWei_Files_Id=${this.data.child.id}`);
 
+            console.log('扫描结果', res2);
+            console.log('扫描ProBar', res.result);
+            console.log('扫描id', this.data.child.id);
+            if (!res2.data || typeof(res2.data )=='string') {
               wx.showToast({
                 title: '无此商品',
                 icon: 'none',
                 duration: 2000
               })
-              // setTimeout(()=>{
-
-              //   this.onLoad({id:this.data.id})
-              // },1000)
             } else {
               this.setData({
                 child: {
@@ -273,13 +272,6 @@ Page({
                 XA_BuHuo: res2.data.XA_BuHuo
               })
             }
-          },
-          fail: (err) => {
-            console.log("qwe", err);
-            wx.showToast({
-              icon: 'none',
-              title: '失败',
-            })
           }
         })
         this.setData({
@@ -299,9 +291,67 @@ Page({
     })
   },
   radioChange(e) {
-    console.log('radio发生change事件，携带value值为：', e.detail.value)
+    // console.log('radio发生change事件，携带value值为：', e.detail.value)
     let query = e.currentTarget.dataset['type'];
     const items = this.data.child[query]
+    if(query=="BJitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          BJ_XiangWeiNumber:e.detail.value
+        }
+      })
+    }
+    if(query=="SYitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          SY_XiangWeiNumber:e.detail.value
+        }
+      })
+    }    if(query=="CDitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          CD_XiangWeiNumber:e.detail.value
+        }
+      })
+    }    if(query=="GZitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          GZ_XiangWeiNumber:e.detail.value
+        }
+      })
+    }    if(query=="JNitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          JN_XiangWeiNumber:e.detail.value
+        }
+      })
+    }    if(query=="SHitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          SH_XiangWeiNumber:e.detail.value
+        }
+      })
+    } if(query=="WHitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          WH_XiangWeiNumber:e.detail.value
+        }
+      })
+    } if(query=="XAitems"){
+      this.setData({
+        child: {
+          ...this.data.child,
+          XA_XiangWeiNumber:e.detail.value
+        }
+      })
+    }
     for (let i = 0, len = items.length; i < len; ++i) {
       items[i].checked = items[i].value === e.detail.value
     }
@@ -315,7 +365,7 @@ Page({
     // console.log(this.data.items)
   },
   change(e) {
-    console.log(this.data.BJ_BuHuo);
+    // console.log(this.data.BJ_BuHuo);
     let query = e.currentTarget.dataset['type'];
     let url = `http://211.149.255.230:61223/putdata.ashx?ProBar=${this.data.child.ProBar}`
     if (query == "BJ") {
@@ -404,7 +454,7 @@ Page({
     wx.request({
       url,
       success(res) {
-        console.log(res);
+        // console.log(res);
         wx.showToast({
           title: '保存成功',
           icon: 'success',

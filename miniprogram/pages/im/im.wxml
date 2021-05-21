@@ -5,7 +5,7 @@
   <view 
   bindtap="onClick"  
   data-id="{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}"
-  class="box row" wx:for="{{arr}}" wx:key="{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}">
+  class="box row" wx:for="{{arr}}" wx:key="index">
   <view>{{item.GZ_JDDates_UpdateXiangWei_Files_Id}}</view>
   <view style="width:50%;">{{item.FileName}}</view>
   <view>{{item.CreateDate}}</view>

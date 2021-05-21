@@ -26,7 +26,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="BJitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.BJitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.BJitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.BJ_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -45,7 +45,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="SYitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.SYitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.SYitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.SY_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -64,7 +64,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="CDitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.CDitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.CDitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.CD_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -83,7 +83,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="GZitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.GZitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.GZitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.GZ_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -102,7 +102,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="JNitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.JNitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.JNitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.JN_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -121,7 +121,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="SHitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.SHitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.SHitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.SH_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -140,7 +140,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="WHitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.WHitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.WHitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.WH_XiangWeiNumber||item.checked}}" />
             {{item.name}}
@@ -159,7 +159,7 @@
     <view class="row">
       <view>箱号:</view>
       <radio-group bindchange="radioChange" class="row" data-type="XAitems">
-        <label class="weui-cell weui-check__label" wx:for="{{child.XAitems}}" wx:key="{{item.value}}">
+        <label class="weui-cell weui-check__label" wx:for="{{child.XAitems}}" wx:key="index">
           <view class="weui-cell__hd">
             <radio value="{{item.value}}" checked="{{item.value == child.XA_XiangWeiNumber||item.checked}}" />
             {{item.name}}
