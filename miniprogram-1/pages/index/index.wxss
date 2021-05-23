@@ -1,0 +1,56 @@
+.fl{
+  float: left;
+}
+
+.fr{
+  float: right;
+}
+.item-box{
+  display: flex;
+  margin-bottom: 20rpx;
+  font-size: 38rpx;
+  justify-content: space-between;
+  line-height: 40rpx;
+}
+
+.top1{
+  height:100rpx;
+  border-bottom:1px solid #ccc;
+  padding: 0 10rpx;
+}
+.top{
+  height:100rpx;
+  border-bottom:1px solid #ccc;
+  padding: 20rpx 0;
+}
+
+.row{
+  display: flex;
+}
+
+input{
+  /* border: 1rpx solid #ccc; */
+  width: 200rpx;
+  /* font-size: 40rpx; */
+}
+.mr10 view{
+  margin-right:130rpx;
+}
+
+.weui-cell{
+  margin-right: 20rpx;
+}
+.end{
+  color: red;
+}
+
+.weui-check__label{
+  margin: 0;
+  font-size: 12px;
+}
+.top .row {
+  font-size: 12px;
+}
+.top .row radio{
+  width: 44rpx;
+}
